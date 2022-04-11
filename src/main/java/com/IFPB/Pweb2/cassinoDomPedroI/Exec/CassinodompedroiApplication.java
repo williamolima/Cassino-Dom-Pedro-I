@@ -1,4 +1,4 @@
-package com.cassinodompedro.cassinodompedroi;
+package com.IFPB.Pweb2.cassinoDomPedroI.Exec;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
