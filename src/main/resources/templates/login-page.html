@@ -4,9 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/css/login.css}" />
+    <!-- O arquivo global.css serve para pegar estilos globais, como, o input, button, etc, portanto, sempre que criar uma pagina importe ele -->
+    <link rel="stylesheet" th:href="@{/css/global.css}" />
     <title>Login Cassino Dom Pedro I</title>
   </head>
   <body>
-    <p>TestLogin</p>
+    <div class="general-container">
+      <form
+        action="#"
+        th:action="@{/authenticate}"
+        th:object="${auth}"
+        method="post"
+      >
+        <img class="logo-login" th:src="@{/assets/images/logo.png}" />
+        <div class="fields-container">
+          <p for="login">Login:</p>
+          <input placeholder="Login" type="text" th:field="*{login}" />
+
+          <p for="senha">Senha:</p>
+          <input placeholder="Senha" type="text" th:field="*{senha}" />
+        </div>
+        <p th:text="${loginError}" style="color: white"></p>
+        <div style="display: flex">
+          <button type="submit" class="button" style="margin-top: 10px">
+            Login
+          </button>
+
+          <a href="/criar-conta" class="button" style="margin: 10px 0 0 25px">
+            Criar Conta
+          </a>
+        </div>
+      </form>
+    </div>
   </body>
 </html>

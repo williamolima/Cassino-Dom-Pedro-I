@@ -1,0 +1,30 @@
+.general-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  padding: 30px;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+.logo-login {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.fields-container {
+  min-width: 100%;
+}
+
+.fields-container p {
+  margin: 25px 0 8px 0;
+  font-size: 16px;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
